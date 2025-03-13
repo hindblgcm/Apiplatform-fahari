@@ -1,6 +1,13 @@
 
 services:
 ###> doctrine/doctrine-bundle ###
+  web:
+    container_name: app-web
+    build: Dockerfile
+    ports:
+      - 8080:80
+    depends_on: 
+      - database
   database:
     image: postgres:${POSTGRES_VERSION:-16}-alpine
     environment:

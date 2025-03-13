@@ -3,7 +3,7 @@ services:
 ###> doctrine/doctrine-bundle ###
   web:
     container_name: app-web
-    build: Dockerfile
+    build: .
     ports:
       - 8080:80
     depends_on: 

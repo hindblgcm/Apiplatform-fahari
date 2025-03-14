@@ -17,5 +17,8 @@ jobs:
           uses: actions/checkout@v4
         - name: display variable
           run: echo ${{ env.VARIABLE_NAME }}
-  
+        - name: Use a Secret
+          env:
+            SUPER_SECRET: ${{ secrets.SECRET_NAME }}
+          run: echo $SUPER_SECRET
 
